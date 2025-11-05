@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --gold: #D1B24A;
+}
+
+.text-gold { color: var(--gold); }
+.bg-gold { background-color: var(--gold); }
