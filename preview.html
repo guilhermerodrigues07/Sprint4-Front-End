@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprint4 — Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0f0f0f;
+        color: #f5f5f5;
+        font-family: 'Inter', sans-serif;
+      }
+      .text-gold {
+        color: #facc15;
+      }
+      .bg-gold {
+        background-color: #facc15;
+      }
+      .bg-darkbg {
+        background-color: #0f0f0f;
+      }
+      .shadow-smooth {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+
+  <body class="bg-darkbg text-gray-100">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-gray-900/70 backdrop-blur-md border-b border-gray-800 z-50 shadow-smooth">
+      <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center gap-2">
+          <img src="./src/assets/logo.png" alt="Logo" class="w-8 h-8" />
+          <span class="text-gold font-bold text-lg tracking-wide">Sprint4</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#inicio" class="text-gray-300 hover:text-gold transition">Início</a>
+          <a href="#sobre" class="text-gray-300 hover:text-gold transition">Sobre</a>
+          <a href="#contato" class="text-gray-300 hover:text-gold transition">Contato</a>
+          <a
+            href="#"
+            class="px-4 py-2 bg-gold text-black rounded-lg font-semibold hover:bg-yellow-400 transition"
+            >Deploy</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- FrontPage -->
+    <main class="max-w-6xl mx-auto px-6 pt-28 text-center">
+      <section id="inicio">
+        <img src="./src/assets/logo.png" alt="Logo" class="mx-auto w-24 mb-6 drop-shadow-lg" />
+        <h1 class="text-5xl font-extrabold text-gold mb-4">Bem-vindo à Sprint4</h1>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+          Front-end moderno desenvolvido com <span class="text-gold font-semibold">React + Vite + TailwindCSS</span>.
+          Projeto com design responsivo, componentes interativos e dashboard dinâmico.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#dashboard"
+            class="px-6 py-3 bg-gold text-black font-semibold rounded-lg shadow hover:bg-yellow-400 transition"
+          >
+            Ver Dashboard
+          </a>
+          <a
+            href="#sobre"
+            class="px-6 py-3 border border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-black transition"
+          >
+            Saiba Mais
+          </a>
+        </div>
+      </section>
+
+      <section id="sobre" class="mt-20 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gold mb-4">Sobre o Projeto</h2>
+        <p class="text-gray-400 leading-relaxed">
+          A Sprint4 é uma aplicação front-end criada com o objetivo de demonstrar as boas práticas do
+          desenvolvimento web moderno. Utiliza React, TailwindCSS e Vite, combinando performance e design.
+        </p>
+      </section>
+
+      <section id="features" class="mt-20 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-gray-900/40 p-6 rounded-2xl shadow hover:shadow-lg hover:bg-gray-900/60 transition">
+          <h3 class="text-xl font-semibold text-gold mb-2">🚀 Performance</h3>
+          <p class="text-gray-400 text-sm">Desenvolvido com Vite para um ambiente rápido e leve.</p>
+        </div>
+        <div class="bg-gray-900/40 p-6 rounded-2xl shadow hover:shadow-lg hover:bg-gray-900/60 transition">
+          <h3 class="text-xl font-semibold text-gold mb-2">🎨 Design Responsivo</h3>
+          <p class="text-gray-400 text-sm">Interface adaptável e otimizada para todos os dispositivos.</p>
+        </div>
+        <div class="bg-gray-900/40 p-6 rounded-2xl shadow hover:shadow-lg hover:bg-gray-900/60 transition">
+          <h3 class="text-xl font-semibold text-gold mb-2">⚙️ Componentes Interativos</h3>
+          <p class="text-gray-400 text-sm">Utiliza padrões de UI modernos com reutilização eficiente de código.</p>
+        </div>
+      </section>
+
+      <section id="contato" class="mt-20">
+        <h2 class="text-3xl font-bold text-gold mb-6">Entre em Contato</h2>
+        <form class="max-w-md mx-auto space-y-4">
+          <input
+            type="text"
+            placeholder="Seu nome"
+            class="w-full p-3 rounded-lg bg-gray-900/40 border border-gray-700 focus:outline-none focus:border-gold"
+          />
+          <input
+            type="email"
+            placeholder="Seu e-mail"
+            class="w-full p-3 rounded-lg bg-gray-900/40 border border-gray-700 focus:outline-none focus:border-gold"
+          />
+          <textarea
+            rows="4"
+            placeholder="Mensagem..."
+            class="w-full p-3 rounded-lg bg-gray-900/40 border border-gray-700 focus:outline-none focus:border-gold"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full py-3 bg-gold text-black font-semibold rounded-lg hover:bg-yellow-400 transition"
+          >
+            Enviar
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-24 bg-accent text-gray-300 py-6 border-t border-gray-800">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-center md:text-left">
+          © <span id="ano"></span> <span class="text-gold font-semibold">Sprint4</span>. Todos os direitos reservados.
+        </p>
+        <div class="flex gap-5 text-xl">
+          <a href="#" class="hover:text-gold transition-colors">🐙</a>
+          <a href="#" class="hover:text-gold transition-colors">💼</a>
+          <a href="#" class="hover:text-gold transition-colors">📸</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('ano').textContent = new Date().getFullYear()
+    </script>
+  </body>
+</html>

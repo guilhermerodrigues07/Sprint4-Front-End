@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Ana Souza",
+    "role": "Atacante",
+    "club": "Seleção Brasileira",
+    "image": "https://images.unsplash.com/photo-1600962815726-457c3d41bb0c?auto=format&fit=crop&w=800&q=80",
+    "bio": "Atacante de velocidade e finalização precisa."
+  },
+  {
+    "id": 2,
+    "name": "Mariana Lima",
+    "role": "Goleira",
+    "club": "Santos FC",
+    "image": "https://images.unsplash.com/photo-1587385789097-06820c9b5931?auto=format&fit=crop&w=800&q=80",
+    "bio": "Goleira com reflexos excepcionais e liderança."
+  },
+  {
+    "id": 3,
+    "name": "Larissa Alves",
+    "role": "Meia",
+    "club": "Corinthians",
+    "image": "https://images.unsplash.com/photo-1615397349754-0e4aab8808b1?auto=format&fit=crop&w=800&q=80",
+    "bio": "Meia criativa com visão de jogo e passes precisos."
+  }
+]

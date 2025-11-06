@@ -4,10 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: '#D1B24A',
-        darkbg: '#0f1720'
+        gold: '#f5b800',
+        purple: '#7e3ff2',
+        darkbg: '#0b0b0b'
       }
-    },
+    }
   },
   plugins: [],
 }

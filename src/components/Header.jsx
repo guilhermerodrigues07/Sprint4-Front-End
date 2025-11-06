@@ -1,21 +1,105 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
-export default function Header({onContact}){
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <header className='bg-gray-900/30 backdrop-blur sticky top-0 z-20'>
-      <div className='max-w-6xl mx-auto flex items-center justify-between p-4'>
-        <div className='flex items-center gap-3'>
-          <div className='w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 via-gold to-yellow-600 flex items-center justify-center text-black font-bold'>S4</div>
-          <div>
-            <h1 className='text-lg font-semibold'>Sprint4</h1>
-            <p className='text-xs text-gray-400'>Front-end Design · TailwindCSS · Vite</p>
-          </div>
-        </div>
-        <nav className='flex items-center gap-3'>
-          <button className='px-3 py-2 text-sm rounded-lg hover:bg-gray-800' onClick={onContact}>Contato</button>
-          <a className='px-3 py-2 bg-gold text-black rounded-lg text-sm' href='#'>Deploy</a>
+    <header className="fixed top-0 left-0 w-full bg-gray-900/70 backdrop-blur-md border-b border-gray-800 z-50 shadow-smooth">
+      <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
+        {/* Logo + Nome */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Logo" className="w-8 h-8" />
+          <span className="text-gold font-bold text-lg tracking-wide">Sprint4</span>
+        </Link>
+
+        {/* Menu Desktop */}
+        <nav className="hidden md:flex items-center gap-8">
+          <Link
+            to="/"
+            className="text-gray-300 hover:text-gold transition"
+          >
+            Início
+          </Link>
+          <Link
+            to="/dashboard"
+            className="text-gray-300 hover:text-gold transition"
+          >
+            Dashboard
+          </Link>
+          <a
+            href="#sobre"
+            className="text-gray-300 hover:text-gold transition"
+          >
+            Sobre
+          </a>
+          <a
+            href="#contato"
+            className="text-gray-300 hover:text-gold transition"
+          >
+            Contato
+          </a>
+          <a
+            href="https://vercel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-gold text-black rounded-lg font-semibold hover:bg-yellow-400 transition"
+          >
+            Deploy
+          </a>
         </nav>
+
+        {/* Botão Mobile */}
+        <button
+          className="md:hidden text-gray-300 hover:text-gold transition"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? '✕' : '☰'}
+        </button>
       </div>
+
+      {/* Menu Mobile */}
+      {menuOpen && (
+        <div className="md:hidden bg-gray-900 border-t border-gray-800 flex flex-col items-center space-y-4 py-4">
+          <Link
+            to="/"
+            className="text-gray-300 hover:text-gold transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Início
+          </Link>
+          <Link
+            to="/dashboard"
+            className="text-gray-300 hover:text-gold transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Dashboard
+          </Link>
+          <a
+            href="#sobre"
+            className="text-gray-300 hover:text-gold transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sobre
+          </a>
+          <a
+            href="#contato"
+            className="text-gray-300 hover:text-gold transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contato
+          </a>
+          <a
+            href="https://vercel.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 bg-gold text-black rounded-lg font-semibold hover:bg-yellow-400 transition"
+          >
+            Deploy
+          </a>
+        </div>
+      )}
     </header>
   )
 }
